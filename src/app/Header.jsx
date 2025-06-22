@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 function Header() {
 	return (
-		<header className="shadow-md mb-10">
+		<header className="shadow-md mb-10 font-sans">
 			<nav>
 				<ul className="flex items-center  justify-between py-2 container xl:max-w-screen-xl">
 					<li>
