@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import SendOTPFrom from './SendOTPFrom'
 import http from '@/services/httpService'
+import { toast } from 'react-hot-toast'
 
 function Authpage() {
 	const [phoneNumber, setPhoneNumber] = useState('')
