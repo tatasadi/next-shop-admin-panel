@@ -37,3 +37,10 @@ body {
 .container {
 	@apply mx-auto;
 }
+
+.btn {
+	@apply p-2 mt-0;
+}
+.btn-primary {
+	@apply mb-4 bg-green-500 hover:bg-blue-300;
+}
