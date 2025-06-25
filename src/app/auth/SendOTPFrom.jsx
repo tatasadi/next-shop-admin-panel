@@ -3,8 +3,11 @@ import TextField from '../ui/TextField'
 
 function SendOTPFrom({ phoneNumber, onChange, onSubmit, isLoading }) {
 	return (
-		<div>
-			<form className="space-y-10" onSubmit={onSubmit}>
+		<div className="flex items-center justify-center">
+			<form
+				className="space-y-10 lg:max-w-xl w-full"
+				onSubmit={onSubmit}
+			>
 				<TextField
 					label="شماره موبایل"
 					name="phoneNumber"
@@ -15,11 +18,7 @@ function SendOTPFrom({ phoneNumber, onChange, onSubmit, isLoading }) {
 					{isLoading ? (
 						<Loader />
 					) : (
-						<button
-							type="submit"
-							className="btn-primary font-bold rounded-2xl transition-all duration-300 px-4 py-3 text-white shadow-lg 
-							shadow-blue-800 w-full"
-						>
+						<button type="submit" className="btn-primary">
 							ارسال کد تایید
 						</button>
 					)}
