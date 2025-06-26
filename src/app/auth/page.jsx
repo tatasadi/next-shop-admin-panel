@@ -1,18 +1,24 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import SendOTPFrom from './SendOTPFrom'
 import http from '@/services/httpService'
 import { toast } from 'react-hot-toast'
 import { useMutation } from '@tanstack/react-query'
 import { getOtp, checkOtp } from '@/services/authServices'
 import CheckOTPForm from './CheckOTPForm'
+import { useRouter } from 'next/navigation'
+
+const RESEND_TIME = 90
 
 function Authpage() {
 	const [phoneNumber, setPhoneNumber] = useState('')
-	const [step, setStep] = useState(2)
+	const [step, setStep] = useState(1)
+	const [time, setTime] = useState(RESEND_TIME)
 	const [otp, setOtp] = useState('')
+	const router = useRouter()
+
 	const {
-		data,
+		data: otpResponse,
 		error,
 		isLoading,
 		mutateAsync: mutateGetOtp,
@@ -20,9 +26,10 @@ function Authpage() {
 		mutationFn: getOtp,
 	})
 
-	const { mutateAsync: mutateCheckOtp } = useMutation({
-		mutationFn: checkOtp,
-	})
+	const { mutateAsync: mutateCheckOtp, isLoading: isCheckingOtp } =
+		useMutation({
+			mutationFn: checkOtp,
+		})
 
 	const phoneNumberHandler = e => {
 		setPhoneNumber(e.target.value)
@@ -31,8 +38,11 @@ function Authpage() {
 		e.preventDefault()
 		try {
 			const data = await mutateGetOtp({ phoneNumber })
+			console.log(data)
 			toast.success(data.message)
 			setStep(2)
+			setTime(RESEND_TIME)
+			setOtp('')
 		} catch (error) {
 			toast.error(error?.response?.data?.message)
 		}
@@ -45,15 +55,24 @@ function Authpage() {
 				otp,
 			})
 			toast.success(message)
-			// if (user.isActive) {
-			// router.push('/')
-			// } else {
-			// router.push('/complete-profile')
-			// }
+			if (user.isActive) {
+				router.push('/')
+			} else {
+				router.push('/complete-profile')
+			}
 		} catch (error) {
 			toast.error(error?.response?.data?.message)
 		}
 	}
+
+	useEffect(() => {
+		const timer =
+			time > 0 && setInterval(() => setTime(t => t - 1), 1000)
+		return () => {
+			if (timer) clearInterval(timer)
+		}
+	}, [time])
+
 	const renderSteps = () => {
 		switch (step) {
 			case 1:
@@ -72,8 +91,10 @@ function Authpage() {
 						otp={otp}
 						setOtp={setOtp}
 						onSubmit={checkOtpHandler}
-						// time={time}
+						time={time}
 						onResendOtp={sendOtpHandler}
+						otpResponse={otpResponse}
+						isCheckingOtp={isCheckingOtp}
 					/>
 				)
 			default:
