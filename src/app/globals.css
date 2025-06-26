@@ -42,5 +42,5 @@ body {
 	@apply w-full py-3 px-4 rounded-xl bg-gray-100 text-gray-800 border border-gray-100 outline-none duration-200 transition-all hover:border-blue-300 focus:outline-none focus:border-blue-700 focus:bg-white;
 }
 .btn-primary {
-	@apply font-bold bg-blue-500 hover:bg-blue-300 rounded-2xl transition-all duration-300 px-4 py-3 text-white shadow-lg shadow-blue-800 w-full cursor-pointer;
+	@apply font-bold bg-blue-500 hover:bg-blue-300 hover:text-blue-900 rounded-2xl transition-all duration-300 px-4 py-3 text-white shadow-lg shadow-blue-800 w-full cursor-pointer;
 }
