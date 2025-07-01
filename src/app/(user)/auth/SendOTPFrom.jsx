@@ -1,5 +1,5 @@
-import Loader from '../ui/Loader'
-import TextField from '../ui/TextField'
+import Loader from '../../ui/Loader'
+import TextField from '../../ui/TextField'
 
 function SendOTPFrom({ phoneNumber, onChange, onSubmit, isLoading }) {
 	return (

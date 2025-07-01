@@ -4,8 +4,8 @@ import { useMutation } from '@tanstack/react-query'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { toast } from 'react-hot-toast'
-import TextField from '../ui/TextField'
-import Loader from '../ui/Loader'
+import TextField from '../../ui/TextField'
+import Loader from '../../ui/Loader'
 
 function CompleteProfile() {
 	const [name, setName] = useState('')
