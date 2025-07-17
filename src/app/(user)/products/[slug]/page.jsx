@@ -2,6 +2,7 @@ import {
 	getOneProductBySlug,
 	getProducts,
 } from '@/services/productService'
+import AddToCart from './AddToCart'
 import {
 	toPersianNumbers,
 	toPersianNumbersWithComma,
@@ -37,6 +38,7 @@ async function page({ params }) {
 					</div>
 				</div>
 			)}
+			<AddToCart product={product} />
 		</div>
 	)
 }

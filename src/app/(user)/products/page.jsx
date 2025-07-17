@@ -4,7 +4,7 @@ import CategorySidebar from './CategorySidebar'
 import queryString from 'query-string'
 import { toLocalDateStringShort } from '@/utils/toLocalDate'
 import Link from 'next/link'
-// import AddToCart from './[slug]/AddToCart'
+import AddToCart from './[slug]/AddToCart'
 // import LikeProduct from './LikeProduct'
 import { cookies } from 'next/headers'
 import { toStringCookies } from '@/utils/toStringCookies'
@@ -49,13 +49,13 @@ async function Products({ searchParams }) {
 										</span>
 									</div>
 									<Link
-										className="text-primary-900 font-bold mb-4 block"
+										className="text-blue-500 font-bold mb-4 block"
 										href={`/products/${product.slug}`}
 									>
 										مشاهده محصول
 									</Link>
 									{/* <LikeProduct product={product} /> */}
-									{/* <AddToCart product={product} /> */}
+									<AddToCart product={product} />
 								</div>
 							)
 						})}
