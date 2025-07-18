@@ -1,5 +1,5 @@
 'use client'
-import CheckBox from '../../ui/CheckBox'
+import CheckBox from '@/ui/CheckBox'
 import {
 	usePathname,
 	useSearchParams,

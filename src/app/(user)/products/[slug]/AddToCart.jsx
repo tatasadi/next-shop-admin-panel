@@ -2,7 +2,7 @@
 
 import { useGetUser } from '@/hooks/useAuth'
 import { useAddToCart } from '@/hooks/useCart'
-import Loader from '../../../ui/Loader'
+import Loader from '@/ui/Loader'
 import { useQueryClient } from '@tanstack/react-query'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -49,7 +49,7 @@ function AddToCart({ product }) {
 			) : (
 				<button
 					onClick={addToCartHandler}
-					className="btn-primary py-2"
+					className="btn-primary max-w-md py-2"
 				>
 					اضافه کردن به سبد خرید
 				</button>

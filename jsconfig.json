@@ -4,7 +4,7 @@
 			"@/utils/*": ["./src/utils/*"],
 			"@/components/*": ["./src/components/*"],
 			"@/constants/*": ["./src/constants/*"],
-			"@/common/*": ["./src/common/*"],
+			"@/ui/*": ["./src/app/ui/*"],
 			"@/pages/*": ["./src/app/*"],
 			"@/services/*": ["./src/services/*"],
 			"@/hooks/*": ["./src/hooks/*"],

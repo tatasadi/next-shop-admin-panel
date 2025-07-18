@@ -1,6 +1,6 @@
 'use client'
 
-import RadioInput from '../../ui/RadioInput'
+import RadioInput from '@/ui/RadioInput'
 import {
 	usePathname,
 	useRouter,
