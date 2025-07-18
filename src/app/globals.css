@@ -44,3 +44,25 @@ body {
 .btn-primary {
 	@apply font-bold bg-blue-500 hover:bg-blue-300 hover:text-blue-900 rounded-2xl transition-all duration-300 px-4 py-3 text-white shadow-lg shadow-blue-800 w-full cursor-pointer;
 }
+
+.table__th {
+	@apply border-b-2 border-b-gray-500 font-medium p-3 pr-8 pb-3 text-right;
+}
+.table__td {
+	@apply border-b  border-b-gray-300 p-3 pr-8 pb-3 text-right;
+}
+.badge {
+	@apply whitespace-nowrap px-3 py-1 rounded-xl;
+}
+.badge--success {
+	@apply bg-green-600 text-white;
+}
+.badge--error {
+	@apply bg-rose-600 text-white;
+}
+.badge--primary {
+	@apply bg-blue-500 text-white;
+}
+.badge--secondary {
+	@apply bg-gray-300 text-gray-600;
+}
