@@ -62,7 +62,7 @@ function MePage() {
 					{isUpdating ? (
 						<Loader />
 					) : (
-						<button type="submit" className="btn btn--primary w-full">
+						<button type="submit" className="btn-primary">
 							تایید
 						</button>
 					)}

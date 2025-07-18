@@ -5,7 +5,6 @@ import queryString from 'query-string'
 import { toLocalDateStringShort } from '@/utils/toLocalDate'
 import Link from 'next/link'
 import AddToCart from './[slug]/AddToCart'
-// import LikeProduct from './LikeProduct'
 import { cookies } from 'next/headers'
 import { toStringCookies } from '@/utils/toStringCookies'
 
@@ -54,7 +53,6 @@ async function Products({ searchParams }) {
 									>
 										مشاهده محصول
 									</Link>
-									{/* <LikeProduct product={product} /> */}
 									<AddToCart product={product} />
 								</div>
 							)

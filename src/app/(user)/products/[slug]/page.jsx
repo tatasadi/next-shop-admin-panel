@@ -7,7 +7,7 @@ import {
 	toPersianNumbers,
 	toPersianNumbersWithComma,
 } from '@/utils/toPersianNumbers'
-export const dynamic = 'force-static' // SSG or {cache : "force-cache"}
+export const dynamic = 'force-static'
 export const dynamicParams = false
 
 async function page({ params }) {
