@@ -14,7 +14,7 @@ function Header() {
 			}`}
 		>
 			<nav className="container xl:max-w-screen-xl mx-auto">
-				<ul className="flex items-center justify-between py-4 px-4 md:px-6 text-sm md:text-base font-medium text-gray-700 dark:text-gray-100">
+				<ul className="flex items-center justify-between py-4 px-4 md:px-6 text-sm md:text-base font-medium text-gray-700">
 					<li>
 						<Link
 							href="/"
@@ -57,7 +57,7 @@ function Header() {
 					</li>
 
 					{user ? (
-						<span className="text-xs md:text-sm text-gray-600 dark:text-gray-300 px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-lg">
+						<span className="text-xs md:text-sm text-gray-600 px-3 py-1 bg-gray-100 rounded-lg">
 							{user.name}
 						</span>
 					) : (
