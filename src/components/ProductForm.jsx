@@ -1,7 +1,8 @@
+'use client'
+
 import Select from 'react-select'
-import Loading from '@/common/Loading'
-import TextField from '@/common/TextField'
-import ReactTagInput from '@pathofdev/react-tag-input'
+import TextField from '@/ui/TextField'
+import Loader from '@/ui/Loader'
 
 const productsFormData = [
 	{
@@ -80,9 +81,13 @@ function ProductForm({
 					<label className="mb-2 block" htmlFor="tags">
 						تگ محصولات
 					</label>
-					<ReactTagInput
+					<input
 						id="tags"
-						value={tags}
+						value={
+							Array.isArray(tags)
+								? tags.filter(tag => typeof tag === 'string')
+								: []
+						}
 						onChange={setTags}
 						name="tags"
 					/>
@@ -102,9 +107,9 @@ function ProductForm({
 				</div>
 				<div>
 					{isLoading ? (
-						<Loading />
+						<Loader />
 					) : (
-						<button className="btn btn--primary w-full">تایید</button>
+						<button className="btn-primary">تایید</button>
 					)}
 				</div>
 			</form>

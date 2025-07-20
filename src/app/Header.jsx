@@ -9,42 +9,63 @@ function Header() {
 
 	return (
 		<header
-			className={`shadow-md mb-10 sticky top-0 transition-all duration-200 bg-white ${
+			className={`sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md transition-all duration-300 mb-20 ${
 				isLoading ? 'blur-sm opacity-70' : 'opacity-100 blur-0'
 			}`}
 		>
-			<nav>
-				<ul className="flex items-center  justify-between py-2 container xl:max-w-screen-xl">
+			<nav className="container xl:max-w-screen-xl mx-auto">
+				<ul className="flex items-center justify-between py-4 px-4 md:px-6 text-sm md:text-base font-medium text-gray-700 dark:text-gray-100">
 					<li>
-						<Link className="block py-2" href="/">
+						<Link
+							href="/"
+							className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+						>
 							خانه
 						</Link>
 					</li>
 					<li>
-						<Link className="block py-2" href="/products">
+						<Link
+							href="/products"
+							className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+						>
 							محصولات
 						</Link>
 					</li>
 					<li>
-						<Link className="block py-2" href="/profile">
+						<Link
+							href="/profile"
+							className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+						>
 							پنل کاربر
 						</Link>
 					</li>
 					<li>
-						<Link className="block py-2" href="/admin">
+						<Link
+							href="/admin"
+							className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+						>
 							پنل ادمین
 						</Link>
 					</li>
 					<li>
-						<Link className="block py-2" href="/cart">
+						<Link
+							href="/cart"
+							className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+						>
 							سبد خرید ({cart ? cart.payDetail.productIds.length : 0})
 						</Link>
 					</li>
+
 					{user ? (
-						<span>{user.name}</span>
+						<span className="text-xs md:text-sm text-gray-600 dark:text-gray-300 px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-lg">
+							{user.name}
+						</span>
 					) : (
 						<li>
-							<Link className="block py-2" href="/auth">
+							<Link
+								href="/auth"
+								className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+							>
 								ورود
 							</Link>
 						</li>
