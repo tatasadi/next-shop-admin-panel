@@ -55,7 +55,7 @@ function ProductListTable({ products }) {
 								<td className="table__td font-bold text-lg">
 									<div className="flex items-center gap-x-4">
 										<Link href={`/admin/products/${product._id}`}>
-											<HiEye className="text-primary-900 w-6 h-6" />
+											<HiEye className="text-blue-500 w-6 h-6" />
 										</Link>
 										<button
 											onClick={() =>
@@ -67,7 +67,7 @@ function ProductListTable({ products }) {
 										<Link
 											href={`/admin/products/edit/${product._id}`}
 										>
-											<RiEdit2Line className="w-6 h-6 text-secondary-600" />
+											<RiEdit2Line className="w-6 h-6 text-green-500" />
 										</Link>
 									</div>
 								</td>
