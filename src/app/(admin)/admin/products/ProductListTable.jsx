@@ -17,7 +17,7 @@ function ProductListTable({ products }) {
 			toast.success(message)
 			queryClient.invalidateQueries({ queryKey: ['get-products'] })
 		} catch (error) {
-			toast.error(error?.respone?.data?.message)
+			toast.error(error?.response?.data?.message)
 		}
 	}
 	return (
