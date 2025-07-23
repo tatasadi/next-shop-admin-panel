@@ -21,7 +21,7 @@ function page() {
 
 				<Link
 					href="/admin/products/add"
-					className="inline-flex items-center gap-x-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200 px-4 py-2 text-sm font-medium shadow-md"
+					className="inline-flex items-center gap-x-2 rounded-lg bg-blue-700 text-white hover:bg-blue-400 transition-colors duration-200 px-4 py-2 text-sm font-medium shadow-md"
 				>
 					<HiPlusCircle className="w-5 h-5" />
 					<span>اضافه کردن محصول</span>
