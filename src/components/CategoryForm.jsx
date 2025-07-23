@@ -69,7 +69,7 @@ function CategoryForm({
 					{isLoading ? (
 						<Loader />
 					) : (
-						<button className="btn btn--primary w-full">تایید</button>
+						<button className="btn-primary mt-6">تایید</button>
 					)}
 				</div>
 			</form>
