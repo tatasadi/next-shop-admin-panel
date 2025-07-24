@@ -48,7 +48,7 @@ function CategoryListTable({ categories }) {
 								<td className="table__td">{category.description}</td>
 								<td className="table__td">{category.englishTitle}</td>
 								<td className="table__td">
-									<span className="badge badge--secondary">
+									<span className="badge badge--primary">
 										{category.type}
 									</span>
 								</td>

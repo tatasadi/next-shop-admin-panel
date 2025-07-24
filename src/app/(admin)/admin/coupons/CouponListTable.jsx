@@ -56,7 +56,10 @@ function CouponListTable({ coupons }) {
 									<div className="space-y-2 flex flex-col items-start">
 										{coupon.productIds.map(p => {
 											return (
-												<span className="badge badge--secondary">
+												<span
+													className="badge badge--secondary"
+													key={p.title}
+												>
 													{p.title}
 												</span>
 											)
@@ -71,7 +74,7 @@ function CouponListTable({ coupons }) {
 								<td className="table__td font-bold text-lg">
 									<div className="flex items-center gap-x-4">
 										<Link href={`/admin/coupons/${coupon._id}`}>
-											<HiEye className="text-primary-900 w-6 h-6" />
+											<HiEye className="text-blue-500 w-6 h-6" />
 										</Link>
 										<button
 											onClick={() => removeCouponHandler(coupon._id)}
@@ -79,7 +82,7 @@ function CouponListTable({ coupons }) {
 											<HiTrash className="text-rose-600 w-6 h-6" />
 										</button>
 										<Link href={`/admin/coupons/edit/${coupon._id}`}>
-											<RiEdit2Line className="w-6 h-6 text-secondary-600" />
+											<RiEdit2Line className="w-6 h-6 text-green-500" />
 										</Link>
 									</div>
 								</td>

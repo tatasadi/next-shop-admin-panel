@@ -11,12 +11,14 @@ function page() {
 	const { coupons } = data || {}
 	if (isLoading) return <Loader />
 	return (
-		<div>
-			<div className="mb-5 flex items-center justify-between">
-				<h1 className="text-xl font-bold mb-5">کد های تخفیف</h1>
+		<div className="p-4 md:p-6 bg-white rounded-xl shadow-sm">
+			<div className="mb-6 flex items-center justify-between border-b border-gray-200 pb-4">
+				<h1 className="text-2xl font-extrabold text-gray-800 mb-4">
+					کد های تخفیف
+				</h1>
 				<Link
 					href="/admin/coupons/add"
-					className="font-bold text-blue-500 flex items-center gap-x-2"
+					className="inline-flex items-center gap-x-2 rounded-lg bg-blue-700 text-white hover:bg-blue-400 transition-colors duration-200 px-4 py-2 text-sm font-medium shadow-md"
 				>
 					<HiPlusCircle className="w-6 h-6" />{' '}
 					<span>اضافه کردن کد تحفیف</span>
