@@ -155,10 +155,6 @@ export const adminPaymentListTableTHeads = [
 		id: 8,
 		label: 'وضعیت',
 	},
-	{
-		id: 9,
-		label: 'مشاهده',
-	},
 ]
 
 export const couponListTableTHeads = [

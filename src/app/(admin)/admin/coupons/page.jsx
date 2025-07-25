@@ -16,10 +16,7 @@ function page() {
 				<h1 className="text-2xl font-extrabold text-gray-800 mb-4">
 					کد های تخفیف
 				</h1>
-				<Link
-					href="/admin/coupons/add"
-					className="inline-flex items-center gap-x-2 rounded-lg bg-blue-700 text-white hover:bg-blue-400 transition-colors duration-200 px-4 py-2 text-sm font-medium shadow-md"
-				>
+				<Link href="/admin/coupons/add" className="link-btn">
 					<HiPlusCircle className="w-6 h-6" />{' '}
 					<span>اضافه کردن کد تحفیف</span>
 				</Link>

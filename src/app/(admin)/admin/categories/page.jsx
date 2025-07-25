@@ -17,10 +17,7 @@ function page() {
 				<h1 className="text-2xl font-extrabold text-gray-800 mb-4">
 					دسته بندی
 				</h1>
-				<Link
-					href="/admin/categories/add"
-					className="inline-flex items-center gap-x-2 rounded-lg bg-blue-700 text-white hover:bg-blue-400 transition-colors duration-200 px-4 py-2 text-sm font-medium shadow-md"
-				>
+				<Link href="/admin/categories/add" className="link-btn">
 					<HiPlusCircle className="w-6 h-6" />{' '}
 					<span>اضافه کردن دسته بندی</span>
 				</Link>

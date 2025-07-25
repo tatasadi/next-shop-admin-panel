@@ -5,6 +5,7 @@ import { toLocalDateString } from '@/utils/toLocalDate'
 import PaymentTable from './payments/PaymentTable'
 import Link from 'next/link'
 import Loader from '@/ui/Loader'
+import { HiPlusCircle } from 'react-icons/hi'
 
 function Profile() {
 	const { data, isLoading } = useGetUser()
@@ -23,11 +24,9 @@ function Profile() {
 			<div className="border border-gray-300 rounded-xl  mt-8">
 				<div className="p-4 flex items-center justify-between">
 					<h2 className="font-bold text-xl">آخرین سفارشات کاربر</h2>
-					<Link
-						className="text-blue-500 font-bold"
-						href="/profile/payments"
-					>
-						مشاهده همه سفارشات
+					<Link className="link-btn" href="/profile/payments">
+						<HiPlusCircle className="w-6 h-6" />
+						<span>مشاهده همه سفارشات</span>
 					</Link>
 				</div>
 				<PaymentTable

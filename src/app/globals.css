@@ -66,3 +66,6 @@ body {
 .badge--secondary {
 	@apply bg-gray-300 text-gray-600;
 }
+.link-btn {
+	@apply inline-flex items-center gap-x-2 rounded-lg bg-blue-700 text-white hover:bg-blue-400 transition-colors duration-200 px-4 py-2 text-sm font-medium shadow-md;
+}
