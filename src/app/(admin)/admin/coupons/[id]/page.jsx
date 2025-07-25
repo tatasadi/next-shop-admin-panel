@@ -32,10 +32,10 @@ function CouponDetailsPage() {
 			<div className="mb-10 bg-gradient-to-tr from-green-100 to-white rounded-xl p-6 shadow-sm flex items-center justify-between">
 				<div>
 					<h1 className="text-3xl font-extrabold text-green-800 mb-2">
-						جزئیات کوپن تخفیف
+						جزئیات کد تخفیف
 					</h1>
 					<p className="text-gray-600">
-						اطلاعات کوپن انتخاب‌شده را مشاهده می‌کنید.
+						اطلاعات کد تخفیف انتخاب‌ شده را مشاهده می‌کنید.
 					</p>
 				</div>
 				<Link
@@ -50,7 +50,7 @@ function CouponDetailsPage() {
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<InfoCard
 					icon={<HiOutlineTag />}
-					label="کد کوپن"
+					label="کد تخفیف"
 					value={coupon.code}
 					color="green"
 				/>

@@ -54,10 +54,6 @@ export const userListTableHeads = [
 		id: 6,
 		label: 'تاریخ پیوستن',
 	},
-	{
-		id: 7,
-		label: 'مشاهده',
-	},
 ]
 
 export const productListTableTHeads = [

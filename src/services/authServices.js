@@ -34,3 +34,7 @@ export function logout() {
 export function getAllUsers() {
 	return http.get('/admin/user/list').then(({ data }) => data.data)
 }
+
+export function getUserById(id) {
+	return http.get(`/admin/user/list/${id}`).then(res => res.data.data)
+}
