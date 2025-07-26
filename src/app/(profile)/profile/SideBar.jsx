@@ -13,19 +13,32 @@ function SideBar() {
 		<div>
 			<ul className="flex flex-col space-y-8">
 				<li>
-					<Link href="/">صفحه اصلی</Link>
+					<Link href="/" className="link-li">
+						صفحه اصلی
+					</Link>
 				</li>
 				<li>
-					<Link href="/profile">داشبورد</Link>
+					<Link href="/profile" className="link-li">
+						داشبورد
+					</Link>
 				</li>
 				<li>
-					<Link href="/profile/me">اطلاعات کاربری</Link>
+					<Link href="/profile/me" className="link-li">
+						اطلاعات کاربری
+					</Link>
 				</li>
 				<li>
-					<Link href="/profile/payments">سفارشات </Link>
+					<Link href="/profile/payments" className="link-li">
+						سفارشات{' '}
+					</Link>
 				</li>
 				<li>
-					<button onClick={logoutHandler}>خروج از حساب کاربری</button>
+					<button
+						onClick={logoutHandler}
+						className="link-li cursor-pointer"
+					>
+						خروج از حساب کاربری
+					</button>
 				</li>
 			</ul>
 		</div>

@@ -13,28 +13,47 @@ function AdminSideBar() {
 		<div>
 			<ul className="flex flex-col space-y-8">
 				<li>
-					<Link href="/">صفحه اصلی</Link>
+					<Link href="/" className="link-li">
+						صفحه اصلی
+					</Link>
 				</li>
 				<li>
-					<Link href="/admin">داشبورد</Link>
+					<Link href="/admin" className="link-li">
+						داشبورد
+					</Link>
 				</li>
 				<li>
-					<Link href="/admin/users">کاربران</Link>
+					<Link href="/admin/users" className="link-li">
+						کاربران
+					</Link>
 				</li>
 				<li>
-					<Link href="/admin/products">محصولات</Link>
+					<Link href="/admin/products" className="link-li">
+						محصولات
+					</Link>
 				</li>
 				<li>
-					<Link href="/admin/categories">دسته بندی</Link>
+					<Link href="/admin/categories" className="link-li">
+						دسته بندی
+					</Link>
 				</li>
 				<li>
-					<Link href="/admin/payments">سفارشات </Link>
+					<Link href="/admin/payments" className="link-li">
+						سفارشات{' '}
+					</Link>
 				</li>
 				<li>
-					<Link href="/admin/coupons">کد تخفیف</Link>
+					<Link href="/admin/coupons" className="link-li">
+						کد تخفیف
+					</Link>
 				</li>
 				<li>
-					<button onClick={logoutHandler}>خروج از حساب کاربری</button>
+					<button
+						onClick={logoutHandler}
+						className="link-li cursor-pointer"
+					>
+						خروج از حساب کاربری
+					</button>
 				</li>
 			</ul>
 		</div>
