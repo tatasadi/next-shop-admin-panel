@@ -19,11 +19,6 @@ const sortOptions = [
 		value: 'earliest',
 		label: 'قدیمی ترین',
 	},
-	{
-		id: 3,
-		value: 'popular',
-		label: 'محبوب ترین',
-	},
 ]
 
 function ProductsSort() {
@@ -52,21 +47,24 @@ function ProductsSort() {
 	}, [searchParams])
 
 	return (
-		<div>
-			<p className="font-bold mb-4">مرتب سازی</p>
-			{sortOptions.map(item => {
-				return (
+		<div className="mb-8 bg-white rounded-2xl shadow-md p-5 border border-gray-200">
+			<p className="font-bold text-lg text-gray-800 mb-4 border-b pb-2">
+				🔽 مرتب‌سازی بر اساس
+			</p>
+			<div className="space-y-3">
+				{sortOptions.map(item => (
 					<RadioInput
 						id={item.id}
 						key={item.id}
 						label={item.label}
 						name="product-sort"
 						value={item.value}
-						checked={sort == item.value}
+						checked={sort === item.value}
 						onChange={sortHandler}
+						className="text-sm text-gray-700 hover:text-indigo-600 transition cursor-pointer"
 					/>
-				)
-			})}
+				))}
+			</div>
 		</div>
 	)
 }

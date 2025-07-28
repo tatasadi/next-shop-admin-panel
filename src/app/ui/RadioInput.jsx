@@ -8,7 +8,7 @@ function RadioInput({ id, name, value, onChange, checked, label }) {
 				checked={checked}
 				value={value}
 				onChange={onChange}
-				className="cursor-pointer rounded-full border-none bg-[#D4D5DD]/80 w-4 h-4 checked:text-blue-500"
+				className="cursor-pointer rounded-full border-none bg-[#D4D5DD]/80 w-4 h-4 checked:text-blue-500 accent-indigo-600"
 			/>
 			<label htmlFor={id} className="cursor-pointer">
 				{label}

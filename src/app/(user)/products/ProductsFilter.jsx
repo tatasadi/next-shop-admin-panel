@@ -49,24 +49,25 @@ function ProductsFilter({ categories }) {
 	}
 
 	return (
-		<div className="mb-8">
-			<p className="font-bold mb-4">دسته بندی ها</p>
-			<ul className=" space-y-4">
-				{categories.map(category => {
-					return (
-						<CheckBox
-							key={category._id}
-							id={category._id}
-							value={category.englishTitle}
-							name="product-type"
-							label={category.title}
-							onChange={categoryHandler}
-							checked={selectedCategories.includes(
-								category.englishTitle,
-							)}
-						/>
-					)
-				})}
+		<div className="mb-8 bg-white rounded-2xl shadow-md p-5 border border-gray-200">
+			<p className="font-bold text-lg text-gray-800 mb-4 border-b pb-2">
+				📂 دسته‌بندی‌ها
+			</p>
+			<ul className="space-y-3">
+				{categories.map(category => (
+					<CheckBox
+						key={category._id}
+						id={category._id}
+						value={category.englishTitle}
+						name="product-type"
+						label={category.title}
+						onChange={categoryHandler}
+						checked={selectedCategories.includes(
+							category.englishTitle,
+						)}
+						className="text-sm text-gray-700 flex items-center gap-2 transition hover:text-indigo-600"
+					/>
+				))}
 			</ul>
 		</div>
 	)
