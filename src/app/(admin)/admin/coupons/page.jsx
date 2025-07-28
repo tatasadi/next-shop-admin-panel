@@ -18,7 +18,7 @@ function page() {
 				</h1>
 				<Link href="/admin/coupons/add" className="link-btn">
 					<HiPlusCircle className="w-6 h-6" />{' '}
-					<span>اضافه کردن کد تحفیف</span>
+					<span>اضافه کردن کد تخفیف</span>
 				</Link>
 			</div>
 			<CouponListTable coupons={coupons} />

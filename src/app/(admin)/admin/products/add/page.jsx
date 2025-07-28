@@ -35,7 +35,6 @@ function addProductPage() {
 		try {
 			const { message } = await mutateAsync({
 				...formData,
-				tags,
 				category: selectedCategory._id,
 			})
 			router.push('/admin/products')
@@ -54,8 +53,6 @@ function addProductPage() {
 				onSubmit={handleSubmit}
 				categories={categories}
 				setSelectedCategory={setSelectedCategory}
-				tags={tags}
-				setTags={setTags}
 				isLoading={isLoading}
 				productData={formData}
 				productDataOnChange={handChange}

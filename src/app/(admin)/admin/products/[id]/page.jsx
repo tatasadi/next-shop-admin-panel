@@ -94,8 +94,8 @@ function ProductDetailsPage() {
 					/>
 					<InfoCard
 						icon={<HiOutlineCurrencyDollar />}
-						label="درصد تخفیف"
-						value={product.discount + '%'}
+						label=" تخفیف"
+						value={product.discount.toLocaleString() + ' تومان'}
 						color="rose"
 					/>
 					<InfoCard

@@ -54,8 +54,6 @@ const productsFormData = [
 
 function ProductForm({
 	onSubmit,
-	tags,
-	setTags,
 	productData,
 	productDataOnChange,
 	categories,
@@ -77,21 +75,6 @@ function ProductForm({
 						/>
 					)
 				})}
-				<div>
-					<label className="mb-2 block" htmlFor="tags">
-						تگ محصولات
-					</label>
-					<input
-						id="tags"
-						value={
-							Array.isArray(tags)
-								? tags.filter(tag => typeof tag === 'string')
-								: []
-						}
-						onChange={setTags}
-						name="tags"
-					/>
-				</div>
 				<div>
 					<label htmlFor="category" className="mb-2 block">
 						دسته بندی
