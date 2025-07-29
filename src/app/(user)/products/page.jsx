@@ -43,17 +43,13 @@ async function Products({ searchParams }) {
 									key={product._id}
 									className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 flex flex-col"
 								>
-									{/* تصویر محصول */}
 									<div className="h-48 bg-gray-100 flex items-center justify-center">
-										{/* اگر تصویر داری، جایگزین کن */}
 										<img
 											src={product.image || '/image1.jfif'}
 											alt={product.title}
 											className="h-full object-contain p-4"
 										/>
 									</div>
-
-									{/* محتوای کارت */}
 									<div className="p-4 flex-1 flex flex-col justify-between">
 										<div>
 											<h2 className="text-lg font-bold text-gray-800 line-clamp-1">
@@ -66,8 +62,6 @@ async function Products({ searchParams }) {
 													{toLocalDateStringShort(product.createdAt)}
 												</span>
 											</p>
-
-											{/* قیمت محصول (در صورتی که وجود داشته باشد) */}
 											{product.price && (
 												<p className="mt-2 text-emerald-600 font-bold text-md">
 													{product.price.toLocaleString()} تومان

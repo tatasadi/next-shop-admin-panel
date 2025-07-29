@@ -27,7 +27,6 @@ function CategoryDetailsPage() {
 
 	return (
 		<div className="max-w-4xl mx-auto px-4 sm:px-6 py-10">
-			{/* Header */}
 			<div className="mb-10 bg-gradient-to-tr from-purple-100 to-white rounded-xl p-6 shadow-sm flex items-center justify-between">
 				<div>
 					<h1 className="text-3xl font-extrabold text-purple-800 mb-2">
@@ -44,8 +43,6 @@ function CategoryDetailsPage() {
 					بازگشت
 				</Link>
 			</div>
-
-			{/* Details Section */}
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<InfoCard
 					icon={<HiOutlineTag />}

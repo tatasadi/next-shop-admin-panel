@@ -13,8 +13,7 @@ function ProductsFilter({ categories }) {
 	const searchParams = useSearchParams()
 	const [selectedCategories, setSelectedCategories] = useState(
 		searchParams.get('category')?.split(',') || [],
-	) // ["frontend" , "devops"]
-	// console.log(searchParams.getAll("category")[0].split(","));
+	)
 
 	const createQueryString = useCallback(
 		(name, value) => {
@@ -27,7 +26,6 @@ function ProductsFilter({ categories }) {
 
 	const categoryHandler = e => {
 		const value = e.target.value
-		// already checked :
 		if (selectedCategories.includes(value)) {
 			const categories = selectedCategories.filter(c => c !== value)
 			setSelectedCategories(categories)
@@ -35,7 +33,6 @@ function ProductsFilter({ categories }) {
 				pathname + '?' + createQueryString('category', categories),
 			)
 		} else {
-			// not in checked list:
 			setSelectedCategories([...selectedCategories, value])
 			router.push(
 				pathname +

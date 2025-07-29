@@ -30,7 +30,6 @@ function ProductDetailsPage() {
 
 	return (
 		<div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-			{/* Header */}
 			<div className="mb-10 bg-gradient-to-tr from-blue-100 to-white rounded-xl p-6 shadow-sm flex items-center justify-between">
 				<div>
 					<h1 className="text-3xl font-extrabold text-blue-800 mb-2">
@@ -44,10 +43,7 @@ function ProductDetailsPage() {
 					بازگشت
 				</Link>
 			</div>
-
-			{/* Main Content */}
 			<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-				{/* Image */}
 				<div className="col-span-1">
 					<div className="bg-white shadow-md rounded-xl p-4 border">
 						<h2 className="text-lg font-bold mb-4 text-gray-700 border-b pb-2">
@@ -71,8 +67,6 @@ function ProductDetailsPage() {
 						</div>
 					</div>
 				</div>
-
-				{/* Product Info */}
 				<div className="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
 					<InfoCard
 						icon={<HiOutlineTag />}

@@ -13,6 +13,7 @@ export const dynamicParams = false
 async function page({ params }) {
 	const { slug } = params
 	const { product } = await getOneProductBySlug(slug)
+	console.log(product)
 	return (
 		<div>
 			<h1 className="font-bold text-2xl mb-6">{product.title}</h1>
