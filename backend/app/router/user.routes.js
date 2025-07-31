@@ -37,6 +37,9 @@ router.get(
 
 router.post("/logout", expressAsyncHandler(UserAuthController.logout));
 
+// Test endpoint for creating users (development only)
+router.post("/create-test-user", expressAsyncHandler(UserAuthController.createTestUser));
+
 module.exports = {
   userAuthRoutes: router,
 };

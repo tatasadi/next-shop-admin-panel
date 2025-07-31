@@ -39,7 +39,7 @@ npm start            # Start production server
 
 ### Backend Architecture
 - **Framework**: Express.js with class-based application structure
-- **Database**: MongoDB with Mongoose ODM
+- **Database**: Azure Cosmos DB with MongoDB API using Mongoose ODM
 - **Authentication**: JWT tokens with refresh token mechanism
 - **File Structure**: MVC pattern with controllers, models, routes, validators, and middlewares
 
@@ -63,12 +63,30 @@ npm start            # Start production server
 
 ### Backend Environment Variables
 - `PORT`: Server port (default: 5000)
-- `APP_DB`: MongoDB connection string
+- `APP_DB`: Azure Cosmos DB connection string (MongoDB API format)
 - `ALLOW_CORS_ORIGIN`: CORS origin configuration
 - `COOKIE_PARSER_SECRET_KEY`: Cookie parser secret
 
 ### Frontend Environment Variables
 - `NEXT_PUBLIC_API_URL`: Backend API base URL
+
+## Deployment
+
+### Backend Deployment (Azure App Service)
+- **GitHub Actions**: Automated deployment via `.github/workflows/deploy-backend.yml`
+- **Configuration Files**: 
+  - `backend/web.config` - IIS configuration for Azure App Service
+  - `backend/.deployment` - Deployment configuration
+- **Required Secrets**: 
+  - `AZURE_WEBAPP_NAME` - Your Azure App Service name
+  - `AZURE_WEBAPP_PUBLISH_PROFILE` - Download from Azure portal
+
+### Environment Variables for Production
+- Set these in Azure App Service Configuration:
+  - `APP_DB` - Azure Cosmos DB connection string
+  - `ALLOW_CORS_ORIGIN` - Frontend URL (e.g., https://yourfrontend.vercel.app)
+  - `COOKIE_PARSER_SECRET_KEY` - Random secret string
+  - `PORT` - Automatically set by Azure (usually 80 or 8080)
 
 ## Development Notes
 

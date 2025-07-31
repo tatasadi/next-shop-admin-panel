@@ -31,9 +31,14 @@ class Application {
       .connect(this.#DB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        // Azure Cosmos DB specific options
+        retryWrites: false,
+        ssl: true,
+        authSource: 'admin',
+        maxPoolSize: 10
       })
-      .then((res) => console.log("MongoDB connected!!"))
-      .catch((err) => console.log("Failed to connect to MongoDB", err));
+      .then((res) => console.log("Azure Cosmos DB connected!!"))
+      .catch((err) => console.log("Failed to connect to Azure Cosmos DB", err));
   }
   configServer() {
     this.#app.use(
